@@ -12,7 +12,7 @@ import './index.css'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
-  success: 'Success',
+  success: 'SUCCESS',
   failure: 'FAILURE',
   inProgress: 'IN_PROGRESS',
 }
@@ -25,7 +25,7 @@ class ProductItemDetails extends Component {
     quantity: 1,
   }
 
-  componentDidCatch() {
+  componentDidMount() {
     this.getProductData()
   }
 
@@ -49,7 +49,7 @@ class ProductItemDetails extends Component {
     this.setState({
       apiStatus: apiStatusConstants.inProgress,
     })
-    const jwtToken = Cookies.get('jst_token')
+    const jwtToken = Cookies.get('jwt_token')
     const apiUrl = `https://apis.ccbp.in/products/${id}`
     const options = {
       headers: {

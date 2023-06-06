@@ -15,7 +15,7 @@ const SimilarProductItem = props => {
       <p>{title}</p>
       <p>by {brand}</p>
       <div>
-        <p>Rs {price}</p>
+        <p>Rs {price}/-</p>
         <div>
           <p>{rating}</p>
           <img

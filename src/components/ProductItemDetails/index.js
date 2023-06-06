@@ -207,6 +207,7 @@ class ProductItemDetails extends Component {
     return (
       <>
         <Header />
+        <h1>Output</h1>
         <div>{this.renderProductDetails()}</div>
       </>
     )
